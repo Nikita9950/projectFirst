@@ -14,5 +14,7 @@ HeadOfDepartment.prototype.getPosition = function () {
 HeadOfDepartment.prototype.setPosition = function (position) {
   if (typeof position === 'string') {
     this._position = position
+  } else {
+    console.warn('invalid data type')
   }
 }

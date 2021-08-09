@@ -1,7 +1,7 @@
-function Employee(name, phone, department) {
+function Employee(name, phone, departmentId) {
   this._name = name
   this._phone = phone
-  this._department = department
+  this._departmentId = departmentId
 }
 
 Employee.prototype.getName = function () {
@@ -12,17 +12,19 @@ Employee.prototype.setPhone = function (phone) {
   if (typeof phone === 'string') {
     this._phone = phone
   } else {
-    return new Error('invalid data type')
+    console.warn('invalid data type')
   }
 
 }
 
-Employee.prototype.getDepartment = function () {
-  return this._department
+Employee.prototype.getDepartmentId = function () {
+  return this._departmentId
 }
 
-Employee.prototype.setDepartment = function (department) {
-  if (typeof department === 'string') {
-    this._department = department
+Employee.prototype.setDepartmentId = function (departmentId) {
+  if (typeof departmentId === 'number') {
+    this._departmentId = departmentId
+  } else {
+    console.warn('invalid data type')
   }
 }

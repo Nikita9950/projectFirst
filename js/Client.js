@@ -12,10 +12,10 @@ Client.prototype.getEmployee = function () {
 }
 
 Client.prototype.setEmployee = function (employee) {
-  if (employee instanceof Object) {
+  if (employee instanceof Employee) {
     this._employee = employee
   } else {
-    return new Error('Invalid data type')
+    console.warn('Invalid data type')
   }
 
 }
