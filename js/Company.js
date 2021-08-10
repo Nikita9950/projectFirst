@@ -83,6 +83,6 @@ Company.prototype.getEmployeesByDepartment = function (departmentId) {
       return elem.getDepartmentId() === departmentId
     })
   } else {
-    return new Error('invalid data type')
+    console.warn('invalid data type')
   }
 }
